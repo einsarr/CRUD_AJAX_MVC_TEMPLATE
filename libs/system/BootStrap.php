@@ -1,5 +1,6 @@
 <?php
 namespace libs\system;
+use src\controller\RolesController;
 class BootStrap
 {
     public function __construct()
@@ -11,8 +12,8 @@ class BootStrap
             $controller_file = "src/controller/".$url[0]."Controller.php";
             if(file_exists($controller_file))
             {
-                require_once $controller_file;
-                $file = $url[0]."Controller";
+                //require_once $controller_file;
+                $file = new RolesController();//$url[0]."Controller";
                 $controller_object = new $file();
                 if(isset($url[2]))
                 {
@@ -21,7 +22,7 @@ class BootStrap
                     {
                         $controller_object->$method($url[2]);
                     }else{
-                        die($method." n'existe pas dans le controlleur ".$file);
+                        die($method." n'existe pas dans le controlleur ");//.$file);
                     }
                 }
                 else if(isset($url[1]))
@@ -31,7 +32,7 @@ class BootStrap
                     {
                         $controller_object->$method();
                     }else{
-                        die($method." n'existe pas dans le controlleur ".$file);
+                        die($method." n'existe pas dans le controlleur ");//.$file);
                     }
                 }
             }else{
