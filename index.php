@@ -11,4 +11,16 @@ require_once "config/autoload_link.php";
 $mvc = new BootStrap();
 
 ?>
-fff
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <a href="http://localhost:8080/mesprojets/orm/Roles/getAll">Lister</a>
+        <a href="http://localhost:8080/mesprojets/orm/Roles/add">Add</a>
+    </body>
+</html>

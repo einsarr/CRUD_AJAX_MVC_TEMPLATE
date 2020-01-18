@@ -8,6 +8,13 @@ class RolesDb extends Model
         return $this->entityManager
                     ->createQuery("SELECT r FROM Roles r")
                     ->getResult(); 
-        //array("ROLE_COMPTA","ROLE_FINANCE");
+    }
+    public function add($nom)
+    {
+        $role = new \Roles();
+        $role->setNom($nom);
+        $this->entityManager->persist($role);
+        $this->entityManager->flush();
+        return  $role->getId();
     }
 }

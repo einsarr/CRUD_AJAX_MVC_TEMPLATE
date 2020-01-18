@@ -9,6 +9,18 @@ class RolesController extends Controller
     {
         return $this->view->load("roles/add");
     }
+    public function save()
+    {
+        $nom = $_POST["nom"];
+        $role = new RolesDb();
+        $message="";
+        if($role->add($nom)){
+            $data = "Ajout réussie avec succès";
+        }else{
+            $data = "Erreur d'ajout";
+        }
+        return $this->view->load("roles/add",$data);
+    }
     public function getAll()
     {
         $role = new RolesDb();
@@ -22,6 +34,12 @@ class RolesController extends Controller
     public function edit($id)
     {
         echo $id; 
+    }
+    public function update()
+    {
+        $nom = $_POST["nom"];
+        
+        return $this->view->load("roles/getAll");
     }
 }
 
