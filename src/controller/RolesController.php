@@ -1,9 +1,18 @@
 <?php
 namespace src\controller;
-class RolesController
+use libs\system\Controller;
+use src\model\RolesDb;
+
+class RolesController extends Controller
 {
     public function add()
     {
-        echo 2233;
+        return $this->view->load("roles/add");
+    }
+    public function getAll()
+    {
+        $role = new RolesDb();
+        $roles = $role->findAll();//array("ROLE_USER","ROLE_ADMIN");
+        return $this->view->load("roles/getAll",$roles);
     }
 }
