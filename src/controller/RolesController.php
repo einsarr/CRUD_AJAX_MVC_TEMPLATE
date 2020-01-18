@@ -24,3 +24,6 @@ class RolesController extends Controller
         echo $id; 
     }
 }
+
+
+?>

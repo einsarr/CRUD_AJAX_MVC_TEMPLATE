@@ -39,7 +39,10 @@ class BootStrap
                 die($controller_file." n'existe pas");
             }
         }else{
-            echo "MVC";
+            //echo "MVC";
+            require_once "index.php";
         }
     }
 }
+
+?>

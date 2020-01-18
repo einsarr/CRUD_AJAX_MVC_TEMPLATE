@@ -9,3 +9,6 @@ require_once "config/autoload_link.php";
 //echo $roleDao->getAll();
 
 $mvc = new BootStrap();
+
+?>
+fff
