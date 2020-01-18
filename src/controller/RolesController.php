@@ -1,10 +1,18 @@
 <?php
-namespace src\controller;
+//namespace src\controller;
 use libs\system\Controller;
 use src\model\RolesDb;
 
 class RolesController extends Controller
 {
+    public function login()
+    {
+        return $this->view->load("roles/login");
+    }
+    public function index()
+    {
+        return $this->view->load("roles/pageTest");
+    }
     public function add()
     {
         return $this->view->load("roles/add");
@@ -13,7 +21,7 @@ class RolesController extends Controller
     {
         $nom = $_POST["nom"];
         $role = new RolesDb();
-        $message="";
+        $data="";
         if($role->add($nom)){
             $data = "Ajout réussie avec succès";
         }else{
