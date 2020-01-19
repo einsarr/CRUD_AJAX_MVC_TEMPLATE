@@ -35,11 +35,11 @@
   <!-- Custom scripts for all pages-->
   <script src="<?php echo $base_url.'public/template/admin/js/sb-admin-2.min.js'?>"></script>
 
-  <script src="<?php echo $base_url.'public/template/adminvendor/datatables/jquery.dataTables.min.js'?>"></script>
-  <script src="<?php echo $base_url.'public/template/adminvendor/datatables/dataTables.bootstrap4.min.js'?>"></script>
+  <script src="<?php echo $base_url.'public/template/admin/vendor/datatables/jquery.dataTables.min.js'?>"></script>
+  <script src="<?php echo $base_url.'public/template/admin/vendor/datatables/dataTables.bootstrap4.min.js'?>"></script>
 
   <!-- Page level custom scripts -->
-  <script src="<?php echo $base_url.'public/template/adminjs/demo/datatables-demo.js'?>"></script>
+  <script src="<?php echo $base_url.'public/template/admin/js/demo/datatables-demo.js'?>"></script>
 
 </body>
 

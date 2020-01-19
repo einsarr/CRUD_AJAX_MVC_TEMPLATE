@@ -39,8 +39,10 @@ class BootStrap
                 die($controller_file." n'existe pas");
             }
         }else{
-            //echo "MVC";
-            require_once "index.php";
+            //Définition du controlleur par défaut";
+            require_once "src/controller/RegionController.php";
+            $controller_object = new \RegionController();
+            $controller_object->login();
         }
     }
 }

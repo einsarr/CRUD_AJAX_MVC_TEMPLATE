@@ -6,7 +6,7 @@ class RegionController extends Controller
 {
     public function login()
     {
-        return $this->view->load("roles/login");
+        return $this->view->load("login/login");
     }
     public function index()
     {
