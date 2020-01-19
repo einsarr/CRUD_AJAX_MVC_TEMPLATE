@@ -12,16 +12,18 @@
           <select id="id_region" class="form-control" nam="id_region">
             <option>--- Selectionner la région ---</option>
           </select>
-    </div>
-        <button type="submit" class="btn btn-primary">Valider</button>
-        <button type="reset" class="btn btn-danger">Annuler</button>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Valider</button>
+          <button type="reset" class="btn btn-danger">Annuler</button>
+        </div>
       </form>
   </div><br>
 
        <!-- DataTales Example -->
        <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Liste des régions</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Liste des départements</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -29,13 +31,15 @@
                   <thead>
                     <tr>
                       <th>N°</th>
-                      <th>identifiant région</th>
+                      <th>identifiant départements</th>
+                      <th>Nom départements</th>
                       <th>Nom région</th>
                       <th>options</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <td>Tiger Nixon</td>
                       <td>Tiger Nixon</td>
                       <td>System Architect</td>
                       <td>Edinburgh</td>
@@ -46,6 +50,7 @@
                       </td>
                     </tr>
                     <tr>
+                      <td>Donna Snider</td>
                       <td>Donna Snider</td>
                       <td>27</td>
                       <td>2011/01/25</td>

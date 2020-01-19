@@ -7,8 +7,10 @@
           <label for="nomR">Nom de la région:</label>
           <input type="text" class="form-control" placeholder="Entrez le nom de la région" id="nomR" name="nomR">
         </div>
-        <button type="submit" class="btn btn-primary">Valider</button>
-        <button type="reset" class="btn btn-danger">Annuler</button>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Valider</button>
+          <button type="reset" class="btn btn-danger">Annuler</button>
+        </div>
       </form>
   </div><br>
 
