@@ -10,11 +10,17 @@ class RegionController extends Controller
     }
     public function index()
     {
-        return $this->view->load("roles/pageTest");
+        $header = $this->view->load("public/template/assets/header");
+        $side = $this->view->load("public/template/assets/sideBar");
+        $top = $this->view->load("public/template/assets/topBar");
+        $reg = $this->view->load("regions/lister");
+        $footer = $this->view->load("public/template/assets/footer");
+        $tab = array($header,$side,$top,$reg,$footer);
+        return $tab;
     }
     public function add()
     {
-        return $this->view->load("roles/add");
+        return $this->view->load("regions/add");
     }
     public function save()
     {
