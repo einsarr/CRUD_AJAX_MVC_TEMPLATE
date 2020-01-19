@@ -20,7 +20,13 @@ class RegionController extends Controller
     }
     public function add()
     {
-        return $this->view->load("regions/add");
+        $header = $this->view->load("public/template/assets/header");
+        $side = $this->view->load("public/template/assets/sideBar");
+        $top = $this->view->load("public/template/assets/topBar");
+        $reg = $this->view->load("regions/add");
+        $footer = $this->view->load("public/template/assets/footer");
+        $tab = array($header,$side,$top,$reg,$footer);
+        return $tab;
     }
     public function save()
     {
