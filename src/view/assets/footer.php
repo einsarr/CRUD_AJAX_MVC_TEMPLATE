@@ -1,4 +1,6 @@
-
+<?php
+  $base_url = "http://localhost:8080/mesprojets/orm/";
+?>
       </div>
       <!-- End of Main Content -->
 

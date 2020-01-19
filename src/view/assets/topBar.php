@@ -1,3 +1,6 @@
+<?php
+  $base_url = "http://localhost:8080/mesprojets/orm/";
+?>
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 

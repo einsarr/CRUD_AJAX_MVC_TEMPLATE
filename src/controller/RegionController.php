@@ -10,21 +10,21 @@ class RegionController extends Controller
     }
     public function index()
     {
-        $header = $this->view->load("public/template/assets/header");
-        $side = $this->view->load("public/template/assets/sideBar");
-        $top = $this->view->load("public/template/assets/topBar");
+        $header = $this->view->load("assets/header");
+        $side = $this->view->load("assets/sideBar");
+        $top = $this->view->load("assets/topBar");
         $reg = $this->view->load("regions/lister");
-        $footer = $this->view->load("public/template/assets/footer");
+        $footer = $this->view->load("assets/footer");
         $tab = array($header,$side,$top,$reg,$footer);
         return $tab;
     }
     public function add()
     {
-        $header = $this->view->load("public/template/assets/header");
-        $side = $this->view->load("public/template/assets/sideBar");
-        $top = $this->view->load("public/template/assets/topBar");
+        $header = $this->view->load("assets/header");
+        $side = $this->view->load("assets/sideBar");
+        $top = $this->view->load("assets/topBar");
         $reg = $this->view->load("regions/add");
-        $footer = $this->view->load("public/template/assets/footer");
+        $footer = $this->view->load("assets/footer");
         $tab = array($header,$side,$top,$reg,$footer);
         return $tab;
     }

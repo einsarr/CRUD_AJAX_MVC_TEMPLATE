@@ -1,3 +1,6 @@
+<?php
+  $base_url = "http://localhost:8080/mesprojets/orm/";
+?>
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -49,8 +52,8 @@
   </a>
   <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <a class="collapse-item" href="buttons.html">Ajouter</a>
-      <a class="collapse-item" href="cards.html">Lister</a>
+    <a class="collapse-item" href="<?php echo $base_url.'Departement/add' ?>">Ajouter</a>
+      <a class="collapse-item" href="<?php echo $base_url.'Departement/index' ?>">Lister</a>
     </div>
   </div>
 </li>
