@@ -10,11 +10,23 @@ class DepartementController extends Controller
     }
     public function index()
     {
-        return $this->view->load("roles/pageTest");
+        $header = $this->view->load("assets/header");
+        $side = $this->view->load("assets/sideBar");
+        $top = $this->view->load("assets/topBar");
+        $reg = $this->view->load("departements/lister");
+        $footer = $this->view->load("assets/footer");
+        $tab = array($header,$side,$top,$reg,$footer);
+        return $tab;
     }
     public function add()
     {
-        return $this->view->load("roles/add");
+        $header = $this->view->load("assets/header");
+        $side = $this->view->load("assets/sideBar");
+        $top = $this->view->load("assets/topBar");
+        $reg = $this->view->load("departements/add");
+        $footer = $this->view->load("assets/footer");
+        $tab = array($header,$side,$top,$reg,$footer);
+        return $tab;
     }
     public function save()
     {
