@@ -6,7 +6,7 @@ class RegionDb extends Model
     public function findAll()
     {
         return $this->entityManager
-                    ->createQuery("SELECT r FROM Roles r")
+                    ->createQuery("SELECT r FROM region r")
                     ->getResult(); 
     }
     public function add($nomR)

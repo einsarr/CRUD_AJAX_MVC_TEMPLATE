@@ -35,7 +35,7 @@ class Region
     }
     public function getNomR()
     {
-        return $this->nom;
+        return $this->nomR;
     }
     
     public function getDepartements()

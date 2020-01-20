@@ -37,15 +37,15 @@ $base_url = "http://localhost:8080/mesprojets/orm/";
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $num=1;foreach($regions as $key=>$value) : ?>
+                    <?php $num=1;foreach($data as $key=>$value) : ?>
                     <tr>
                       <td><?php echo $num++; ?></td>
-                      <td><?php // echo $value->getNomR() ?></td>
-                      <td><?php //echo $value->getIdR() ?></td>
+                      <td><?php echo $value->getIdR() ?></td>
+                      <td><?php echo $value->getNomR() ?></td>
                       <td>
-                          <a href="" class="btn btn-danger" onclick="return confirm('Etes-vous sûre de vouloir supprimer la région?')"><span class="fas fa-trash"></span></a>
-                          <a href="" class="btn btn-warning"><span class="fas fa-edit"></span></a>
-                          <a href="" class="btn btn-info"><span class="fas fa-eye"></span></a>
+                          <a href="<?php echo $base_url."region/delete/".$value->getIdR() ?>" class="btn btn-danger" onclick="return confirm('Etes-vous sûre de vouloir supprimer la région?')"><span class="fas fa-trash"></span></a>
+                          <a href="<?php echo $base_url."region/edit/".$value->getIdR() ?>" class="btn btn-warning"><span class="fas fa-edit"></span></a>
+                          <a href="<?php echo $base_url."region/voir/".$value->getIdR() ?>" class="btn btn-info"><span class="fas fa-eye"></span></a>
                       </td>
                     </tr>
                     <?php endforeach; ?>
