@@ -44,3 +44,23 @@
 </body>
 
 </html>
+
+
+
+<script>
+var base_url = "<?php echo $base_url; ?>";
+  $(document).ready(function(){
+      $('#insert').click(function(event){
+          event.preventDefault();
+          $.ajax({
+              url:base_url+"Region/save",
+              method:"post",
+              data: $('form').serialize(),
+              dataType:"text",
+              success:function(strMessage){
+                  $('#message').text(strMessage);
+              }
+          });
+      });
+  })
+    </script>

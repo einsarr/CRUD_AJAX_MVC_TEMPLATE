@@ -9,12 +9,12 @@ class RegionDb extends Model
                     ->createQuery("SELECT r FROM Roles r")
                     ->getResult(); 
     }
-    public function add($nom)
+    public function add($nomR)
     {
-        $role = new \Roles();
-        $role->setNom($nom);
-        $this->entityManager->persist($role);
+        $region = new \Region();
+        $region->setNomR($nomR);
+        $this->entityManager->persist($region);
         $this->entityManager->flush();
-        return  $role->getId();
+        return  $region->getIdR();
     }
 }

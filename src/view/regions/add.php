@@ -1,15 +1,21 @@
+<?php
+$base_url = "http://localhost:8080/mesprojets/orm/";
+?>
 <div class="container-fluid">
 
 <div class="col-md-6">
+    <div id="message" class="text-success"></div>
     <h1 class="h3 mb-4 text-gray-800">GESTION DES REGIONS</h1>
-      <form action="<?php echo $base_url.'Region/save' ?>" method="post">
-        <div class="form-group">
-          <label for="nomR">Nom de la région:</label>
-          <input type="text" class="form-control" placeholder="Entrez le nom de la région" id="nomR" name="nomR">
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Valider</button>
-          <button type="reset" class="btn btn-danger">Annuler</button>
+      <form method="post">
+        <div class="form">
+          <div class="form-group">
+            <label for="nomR">Nom de la région:</label>
+            <input type="text" class="form-control" placeholder="Entrez le nom de la région" id="nomR" name="nomR">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="insert">Valider</button>
+            <button type="reset" class="btn btn-danger">Annuler</button>
+          </div>
         </div>
       </form>
   </div><br>
@@ -31,26 +37,18 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <?php $num=1;foreach($regions as $key=>$value) : ?>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
+                      <td><?php echo $num++; ?></td>
+                      <td><?php // echo $value->getNomR() ?></td>
+                      <td><?php //echo $value->getIdR() ?></td>
                       <td>
                           <a href="" class="btn btn-danger" onclick="return confirm('Etes-vous sûre de vouloir supprimer la région?')"><span class="fas fa-trash"></span></a>
                           <a href="" class="btn btn-warning"><span class="fas fa-edit"></span></a>
                           <a href="" class="btn btn-info"><span class="fas fa-eye"></span></a>
                       </td>
                     </tr>
-                    <tr>
-                      <td>Donna Snider</td>
-                      <td>27</td>
-                      <td>2011/01/25</td>
-                      <td>
-                          <a href="" class="btn btn-danger" onclick="return confirm('Etes-vous sûre de vouloir supprimer la région?')"><span class="fas fa-trash"></span></a>
-                          <a href="" class="btn btn-warning"><span class="fas fa-edit"></span></a>
-                          <a href="" class="btn btn-info"><span class="fas fa-eye"></span></a>
-                      </td>
-                    </tr>
+                    <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
@@ -59,3 +57,5 @@
   
 
 </div>
+
+
