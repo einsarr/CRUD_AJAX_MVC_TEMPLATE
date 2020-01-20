@@ -17,6 +17,8 @@ class View
                 $file = "src/view/".$args[0].".php";
                 if(file_exists($file))
                 {
+                    //Base url
+                    $base_url = "http://localhost:8080/mesprojets/orm/";
                     require_once $file;
                 }else{
                     die($file." n'existe pas comme vue");
@@ -26,6 +28,8 @@ class View
                 $file = "src/view/".$args[0].".php";
                 if(file_exists($file))
                 {
+                    //Base url
+                    $base_url = "http://localhost:8080/mesprojets/orm/";
                     $data = $args[1];
                     require_once $file;
                 }else{

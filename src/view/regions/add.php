@@ -1,5 +1,5 @@
 <?php
-$base_url = "http://localhost:8080/mesprojets/orm/";
+//$base_url = "http://localhost:8080/mesprojets/orm/";
 ?>
 <div class="container-fluid">
 
